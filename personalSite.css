@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    --header-text-color: rgb(255, 255, 255);
+    --body-text-color: #414141;
+    --footer-text-color: white;
+    --header-footer-background: rgb(0, 99, 169);
+    --body-background: #dfdfdf;
+    background: var(--body-background);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* navbar */
+
+
+/* container for archer and everything else */
+.header-container {
+    width: 100vw;
+    display: flex;
+    color: var(--header-text-color);
+    
+}
+
+/* archer */
+.header-title {
+    flex-grow: 1;
+}
+
+/* everything else */
+.header-list-items {
+    display: flex;
+}
+
+.header-list {
+    list-style-type: none;
+    background:var(--header-footer-background);
+    transition: all .3s;
+}
+
+.header-list:hover {
+    background: #a2a2a2;
+}
+.header-title .header-list:hover {
+    background: var(--header-footer-background);
+}
+
+.header-list a {
+    color: var(--header-text-color);
+    background: none;
+    display: inline-block;
+}
+
+.header-link {
+    padding: 20px 20px;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+/* hoveable dropdown */
+
+.hoverable-dropdown {
+    box-sizing: border-box;
+    /* width: 100px; */
+    text-align: center;
+    display: none;
+}
+
+.hover {
+    padding: 20px;
+    background: var(--header-footer-background);
+}
+
+.hoverable-dropdown:hover ul {
+    display: block;
+
+}
+
+.hoverable-dropdown-list {
+    width: 150px;
+    transform: translate(-50px);
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 5px 0;
+    
+    list-style: none;
+    border: 2px solid black;
+    background: var(--header-footer-background);
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px black;
+}
+
+.hover-drop-item:hover {
+    background: #dfdfdf;
+}
+
+.hover-drop-item {
+    background: var(--header-footer-background);
+    text-decoration: none;
+    color: var(--header-text-color);
+    text-align: left;
+
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+/* Main */
+.main-container::before,
+.main-container::after {
+    content: "";
+    display: block;
+    padding-top: 20px;
+}
+.main-container {
+    color: var(--body-text-color);
+    background: var(--body-background);
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+.who-am-I-container,
+.skills-container,
+.qualifications-container,
+.projects-container {
+    border: 2px solid black;
+    background: var(--body-background);
+    margin: 20px;
+    text-align: left;
+    padding: 20px;
+    }
+
+.container1,
+.container2,
+.container3,
+.container4 {
+    font-size: 4rem;
+    text-align: center;
+}
+/* Footer */
+
+.footer-container {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background: var(--header-footer-background);
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.footer-contact {
+    background:var(--header-footer-background);
+    color: var(--footer-text-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.footer-attr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--footer-text-color);
+    background: inherit;
+    text-decoration: underline;
+}
+
+.footer-attr a {
+    color: var(--footer-text-color);
+    background: inherit;
+
+}
+
+@media screen and (max-width: 510px) {
+    .header-list-items {
+        display: none;
+    }
+
+    .container1,
+    .container2,
+    .container3,
+    .container4 {
+        font-size: 2rem;
+    }
+
+    .who-am-I-container,
+    .skills-container,
+    .qualifications-container,
+    .projects-container {
+        font-size: .75rem;
+        display: block;
+        border: 2px solid black;
+    }
+    .hoverable-dropdown {
+        display: block;
+    }
+}
